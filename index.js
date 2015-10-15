@@ -13,4 +13,8 @@ app.get('/nickbreaton', function (req, res) {
   res.end('Hello from Nick!');
 });
 
+app.get('/ryanspage', function (req, res) {
+  res.sendFile('./ryansIndex.html');
+});
+
 app.listen(3000);
