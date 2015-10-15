@@ -11,4 +11,8 @@ app.get('/nickbreaton', function (req, res) {
   res.end('Hello from Nick!');
 });
 
+app.get('/michaelpedersen', function (req, res){
+  res.end('Hello from Michael!');
+});
+
 app.listen(3000);
