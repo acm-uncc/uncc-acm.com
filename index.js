@@ -12,7 +12,6 @@ app.get('/nickbreaton', function (req, res) {
 });
 
 app.get('/ryanspage', function (req, res) {
-  res.sendFile('./ryansIndex.html');
+  res.sendFile('ryanspage/index.html' , { root : __dirname});
 });
-
 app.listen(3000);
