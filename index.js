@@ -11,4 +11,7 @@ app.get('/nickbreaton', function (req, res) {
   res.end('Hello from Nick!');
 });
 
+app.get('/ryanspage', function (req, res) {
+  res.sendFile('ryanspage/index.html' , { root : __dirname});
+});
 app.listen(3000);
