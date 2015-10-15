@@ -10,5 +10,8 @@ app.get('/', express.static('./'));
 app.get('/nickbreaton', function (req, res) {
   res.end('Hello from Nick!');
 });
+app.get('/MatthewBrien', function(req, res){
+  res.end("Hello MatthewBrien, Scurge of the Seven Seas");
+})
 
 app.listen(3000);
