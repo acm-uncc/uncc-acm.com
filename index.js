@@ -23,4 +23,8 @@ app.get('/DarsheshPatel', function (req, res){
   res.end('Hello from Darshesh!');
 });
 
+app.get('/sergeneri', function (req, res) {
+  res.end('Hello from Serge!');
+});
+
 app.listen(3000);
