@@ -11,6 +11,10 @@ app.get('/nickbreaton', function (req, res) {
   res.end('Hello from Nick!');
 });
 
+app.get('/MatthewBrien', function(req, res){
+  res.end("Hello MatthewBrien, Scurge of the Seven Seas");
+})
+
 app.get('/ryanspage', function (req, res) {
   res.sendFile('ryanspage/index.html' , { root : __dirname});
 });
