@@ -6,6 +6,8 @@ var path = require('path');
 
 var app = express();
 
+app.set('port', 3000);
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
@@ -30,4 +32,6 @@ app.get('/sergeneri', function (req, res) {
   res.end('Hello from Serge!');
 });
 
-app.listen(3000);
+app.listen(app.get('port'), function () {
+  console.log('Go to http://localhost:3000 to see the website.');
+});
