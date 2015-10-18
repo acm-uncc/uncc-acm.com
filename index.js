@@ -17,7 +17,7 @@ app.get('/nickbreaton', function (req, res) {
 });
 
 app.get('/MatthewBrien', function(req, res){
-  res.end("Hello MatthewBrien, Scurge of the Seven Seas");
+  res.end("Hello from Matthew Brien, the Scurge of the Seven Seas");
 })
 
 app.get('/ryanspage', function (req, res) {
