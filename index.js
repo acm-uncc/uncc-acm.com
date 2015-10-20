@@ -7,8 +7,8 @@ var app = express();
 
 app.get('/', express.static('./'));
 
-app.get('/nickbreaton', function (req, res) {
-  res.end('Hello from Nick!');
+app.get('/ethomp', function (req, res) {
+  res.end('Hello from Elizabeth!');
 });
 
 app.listen(3000);
