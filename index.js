@@ -40,6 +40,10 @@ app.get('/JeremyBohannon', function(req, res){
 	res.end('Hello from Jeremy!');
 });
 
+app.get('/NoahKaplan', function(req, res){
+	res.end('Hello from Noah!');
+});
+
 app.listen(app.get('port'), function () {
   console.log('Go to http://localhost:3000 to see the website.');
 });
