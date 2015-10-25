@@ -1,6 +1,19 @@
 # uncc-acm.com
 A website for the UNCC ACM Chapter
 
+## Commands
+
+```
+./uncc-acm ...
+```
+`run d` - run the website in development mode.
+
+`run p` - run the website in production mode.
+
+`new member [name]` - Creates a new member layout.
+
+`remove member [name]` - Removes a member layout.
+
 ## Running the Site
 
 First off you need to install [Node.js](https://nodejs.org/en/).
@@ -19,5 +32,3 @@ Each member of ACM has the rights to `uncc-acm.com/member/your-name`. This will 
 3. Download the your new repository to your computer.
 4. Navigate to the folder and run the command `./uncc-acm member "your-name"`.
 5. This will create a new folder under `members/your-name` for you to start creating content.
-
-## uncc-acm API
