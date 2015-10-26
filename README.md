@@ -10,9 +10,9 @@ A website for the UNCC ACM Chapter
 
 `run p` - run the website in production mode.
 
-`new member [name]` - Creates a new member layout.
+`member [name]` - Creates a new member layout.
 
-`remove member [name]` - Removes a member layout.
+`member -d [name]` - Removes a member layout.
 
 ## Running the Site
 
