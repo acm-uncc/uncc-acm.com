@@ -4,6 +4,7 @@ var path = require("path");
 
 var server = express();
 
+route("/", "./routes/statics");
 route("/member/", "./routes/members");
 
 server.listen(3000, function () {

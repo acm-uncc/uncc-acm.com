@@ -4,3 +4,4 @@ npm-debug.log
 
 # ignore for testing
 members/test
+assets/test.txt
