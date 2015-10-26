@@ -1,4 +1,5 @@
 {
+  "main": "server/index.js",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-clean": "^0.3.1",

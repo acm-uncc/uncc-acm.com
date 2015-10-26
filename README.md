@@ -6,9 +6,7 @@ A website for the UNCC ACM Chapter
 ```
 ./uncc-acm ...
 ```
-`run d` - run the website in development mode.
-
-`run p` - run the website in production mode.
+`start` - Runs the website in development mode.
 
 `member [name]` - Creates a new member layout.
 

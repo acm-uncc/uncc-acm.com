@@ -6,7 +6,7 @@ var path = require("path");
 
 var commands = {
   member: require("./commands/member"),
-
+  start: require("./commands/start"),
 }
 
 var command = commands[process.argv[2]];

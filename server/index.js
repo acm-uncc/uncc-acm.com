@@ -7,7 +7,7 @@ var server = express();
 fs.readdir(path.join(__dirname, "../members"), function (err, members) {
   if (!err) {
     members.forEach(function (member) {
-      var memberPath = path.join(__dirname, "../members/", member, "index.js");
+      var memberPath = path.join(__dirname, "../members/", member, "server/index");
       server.use("/member/" + member + "/", require(memberPath));
     });
   }
