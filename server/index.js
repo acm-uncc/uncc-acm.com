@@ -4,6 +4,7 @@ var path = require("path");
 
 var server = express();
 
+// include member routes
 fs.readdir(path.join(__dirname, "../members"), function (err, members) {
   if (!err) {
     members.forEach(function (member) {
