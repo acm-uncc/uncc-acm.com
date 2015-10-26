@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "vinyl-map": "^1.0.1"
+  },
+  "dependencies": {
+    "ejs": "^2.3.4",
+    "express": "^4.13.3"
+  }
+}

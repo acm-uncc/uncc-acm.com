@@ -1,9 +1,10 @@
 // import node modules
 var fs = require("fs");
+var gulp = require("gulp");
+var map = require("vinyl-map");
 var path = require("path");
 
-var name;
-var membersdir = path.join(__dirname, "../members/");
+var name, membersdir = path.join(__dirname, "../members/");
 
 function create () {
   var readdir = path.join(__dirname, "../templates/member");
@@ -19,13 +20,11 @@ function create () {
   fs.mkdirSync(writedir);
 
   // copy files from template to new member dir
-  fs.readdir(readdir, function (err, filenames) {
-    filenames.forEach(function (filename) {
-      var file = fs.createReadStream(path.join(readdir, filename));
-      var write = fs.createWriteStream(path.join(writedir, filename));
-      file.pipe(write);
-    });
-  });
+  gulp.src(path.join(readdir, "**/*"))
+    .pipe(map(function (content) {
+      return content.toString().replace(/~/g, name);
+    }))
+    .pipe(gulp.dest(writedir));
 }
 
 function remove () {
