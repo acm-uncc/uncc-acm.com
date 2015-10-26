@@ -24,7 +24,8 @@ gulp.task("watch", ["build"], function () {
 
   // styles
   gulp.watch([
-    path.join(__dirname, "../styles/**/*")
+    path.join(__dirname, "../styles/**/*"),
+    path.join(__dirname, "../members/**/styles/**/*")
   ], [
     "build:styles"
   ]);
