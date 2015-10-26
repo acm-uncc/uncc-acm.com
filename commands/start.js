@@ -12,12 +12,16 @@ gulp.task("develop", [
   "restart",
 ]);
 
-gulp.task("watch", function () {
+gulp.task("watch", ["build"], function () {
+  // server
   gulp.watch([
     path.join(__dirname, "../package.json"),
     path.join(__dirname, "../server/**/*"),
     path.join(__dirname, "../members/**/server/**/*"),
   ], ["restart"])
+
+  // styles
+  gulp.watch(path.join(__dirname, "../styles/**/*"), ["build:styles"]);
 });
 
 gulp.task("restart", function () {

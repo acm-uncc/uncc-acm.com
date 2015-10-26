@@ -2,7 +2,11 @@
   "main": "server/index.js",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-clean": "^0.3.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
     "vinyl-map": "^1.0.1"
   },
   "dependencies": {
