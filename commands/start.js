@@ -18,10 +18,16 @@ gulp.task("watch", ["build"], function () {
     path.join(__dirname, "../package.json"),
     path.join(__dirname, "../server/**/*"),
     path.join(__dirname, "../members/**/server/**/*"),
-  ], ["restart"])
+  ], [
+    "restart"
+  ]);
 
   // styles
-  gulp.watch(path.join(__dirname, "../styles/**/*"), ["build:styles"]);
+  gulp.watch([
+    path.join(__dirname, "../styles/**/*")
+  ], [
+    "build:styles"
+  ]);
 });
 
 gulp.task("restart", function () {
