@@ -1,15 +1,22 @@
 // import node modules
+var clean = require("gulp-clean");
 var fs = require("fs");
 var gulp = require("gulp");
 var map = require("vinyl-map");
 var path = require("path");
 
-var name, membersdir = path.join(__dirname, "../members/");
+var name,
+    membersdir,
+    readdir,
+    writedir;
+
+function init () {
+  membersdir = path.join(__dirname, "../members/");
+  readdir = path.join(__dirname, "../templates/member");
+  writedir = path.join(membersdir, name);
+}
 
 function create () {
-  var readdir = path.join(__dirname, "../templates/member");
-  var writedir = path.join(membersdir, name);
-
   // generate members dir if it does not exist
   if (!fs.existsSync(membersdir)) fs.mkdirSync(membersdir);
 
@@ -28,7 +35,8 @@ function create () {
 }
 
 function remove () {
-
+  gulp.src(writedir)
+    .pipe(clean());
 }
 
 module.exports = function () {
@@ -41,6 +49,7 @@ module.exports = function () {
   }
 
   if (name) {
+    init();
     action();
   } else {
     console.log("Please enter a valid name!");
