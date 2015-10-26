@@ -17,10 +17,6 @@ gulp.task("build", [
   "build:styles"
 ]);
 
-gulp.task("build:production", function () {
-  production = true;
-  gulp.start("build");
-});
 
 gulp.task("build:clean", function () {
   return gulp.src(path.join(outDir, "*"))
@@ -48,5 +44,6 @@ gulp.task("build:styles", function () {
 });
 
 module.exports = function () {
-  gulp.start("build:production");
+  production = true;
+  gulp.start("build");
 }
