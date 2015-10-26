@@ -1,6 +1,7 @@
 {
   "main": "server/index.js",
   "devDependencies": {
+    "express-handlebars": "^2.0.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-clean": "^0.3.1",

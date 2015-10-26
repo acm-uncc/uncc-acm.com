@@ -33,7 +33,7 @@ gulp.task("build:styles", function () {
     }))
     .pipe(minify())
     .pipe(sourcemaps.write())
-    .pipe(rename("index.css"))
+    .pipe(rename("site.css"))
     .pipe(gulp.dest(outDir));
 
   if (production) {

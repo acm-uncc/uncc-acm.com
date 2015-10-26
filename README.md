@@ -1,6 +1,10 @@
 # uncc-acm.com
 A website for the UNCC ACM Chapter
 
+## Current Issues
+
+1. Currently no client side JavaScript is being served.
+
 ## Commands
 
 ```
@@ -21,8 +25,6 @@ First off you need to install [Node.js](https://nodejs.org/en/).
 3. Then start the site in development mode by running `./uncc-acm develop`.
 
 ## Creating a Member Page
-
-### !!!  under construction
 
 Each member of ACM has the rights to `uncc-acm.com/member/your-name`. This will be your home for any ACM related content created by you.
 
