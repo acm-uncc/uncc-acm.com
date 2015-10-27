@@ -58,7 +58,6 @@ A website for the UNCC ACM Chapter
 .
 ├── assets .................. Contains all files served at /assets/
 ├── build ................... Contains all built files. Will also be served from /assets/.
-├── commands ................ Contains commands run by uncc-acm script.
 ├── members ................. Contains all members.
 │   └── member-name ......... A specific member module.
 │       ├── server
@@ -77,6 +76,7 @@ A website for the UNCC ACM Chapter
 │   └── routes .............. Contains all route declarations.
 ├── styles
 │   └── index.scss .......... Is the root style file.
+├── tasks ................... Contains commands run by uncc-acm script.
 ├── templates ............... Contains code used to generate more code.
 ├── tests ................... [x] Contains all unit tests.
 ├── uncc-acm ................ A script to easily run project commands.
