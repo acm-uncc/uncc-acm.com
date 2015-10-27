@@ -69,7 +69,7 @@ A website for the UNCC ACM Chapter
 ├── package.json ............ Declare Node and NPM configuration.
 ├── public .................. Contains all files served at /.
 ├── scripts 
-│   └── index.js ............ [✘] Root script file.
+│   └── index.js ............ [x] Root script file.
 ├── server .................. Contains all server-side logic.
 │   ├── config.js ........... Express instance configuration.
 │   ├── index.js ............ Root script by Node.
@@ -83,5 +83,5 @@ A website for the UNCC ACM Chapter
     ├── index.html .......... The base file for all other rendered views.
     └── notfound.html
     
-[✘] = not implemented
+[x] = not implemented
 ```
