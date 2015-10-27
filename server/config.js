@@ -13,4 +13,12 @@ module.exports = function (server) {
 
   // set handlebars engine
   server.set("view engine", ".html");
+
+  // set port
+  server.set("port", process.env.PORT || 3000);
+
+  // have server listen on specified port
+  server.listen(server.get("port"), function () {
+    console.log("Server is running at http://localhost:" + server.get("port") + "/");
+  });
 }

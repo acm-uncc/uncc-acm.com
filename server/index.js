@@ -23,10 +23,6 @@ server.get("*", function (req, res) {
   res.render("notfound");
 });
 
-server.listen(3000, function () {
-  console.log("Server is running at http://localhost:3000/");
-});
-
 // map route to module
 function route (route, modulePath) {
   server.use(route, require(modulePath));
