@@ -39,6 +39,7 @@ A website for the UNCC ACM Chapter
 18. Take a breath. I know this is a lot if you have never seen any of these programs before.
   - If you need help you can email Nick Breaton, technical lead, at [nick@breaton.com](mailto:nick@breaton.com).
 19. Good luck and thanks for the help.
+
 ### ☺
 
 ## uncc-acm commands
