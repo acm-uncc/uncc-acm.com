@@ -1,9 +1,7 @@
 # uncc-acm.com
 A website for the UNCC ACM Chapter
 
-## Getting Started
-
-### How to Contribute
+## How to Contribute
 
 1. [Create a GitHub account.](https://github.com/join)
 2. Go to [github.com/uncc-acm/uncc-acm.com](https://github.com/uncc-acm/uncc-acm.com).
@@ -40,4 +38,49 @@ A website for the UNCC ACM Chapter
   6. Enter in a message and you are good to go.
 18. Take a breath. I know this is a lot if you have never seen any of these programs before.
   - If you need help you can email Nick Breaton, technical lead, at [nick@breaton.com](mailto:nick@breaton.com).
-19. Good luck and thanks for the help ☺.
+19. Good luck and thanks for the help.
+### ☺
+
+## uncc-acm commands
+
+```
+./uncc-acm ...
+```
+
+- `start` - Start the server in development mode.
+- `member [name]` - Create a new member layout.
+- `member -d [name]` - Delete an existing member layout.
+
+## Project Structure
+
+```
+.
+├── assets .................. Contains all files served at /assets/
+├── build ................... Contains all built files. Will also be served from /assets/.
+├── commands ................ Contains commands run by uncc-acm script.
+├── members ................. Contains all members.
+│   └── member-name ......... A specific member module.
+│       ├── server
+│       │   └── index.js .... Must return an express route element.
+│       ├── styles
+│       │   └── index.scss .. Must be the root of all styles for that member.
+│       └── views ........... Contains all views for the member.
+│           └── index.html
+├── package.json ............ Declare Node and NPM configuration.
+├── public .................. Contains all files served at /.
+├── README.md ............... This :)
+├── scripts ................. Will be minified and served. [NOT IMPLEMENTED]
+│   └── index.js
+├── server .................. Contains all server-side logic.
+│   ├── config.js ........... Express instance configuration.
+│   ├── index.js ............ Root script by Node.
+│   └── routes .............. Contains all route declarations.
+├── styles
+│   └── index.scss .......... Is the root style file.
+├── templates ............... Contains code used to generate more code.
+├── uncc-acm ................ A script to easily run project commands.
+└── views ................... All .html files are run through the Handlebars engine.
+    ├── home.html
+    ├── index.html .......... The base file for all other rendered views.
+    └── notfound.html
+```
