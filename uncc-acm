@@ -5,9 +5,9 @@ var fs = require("fs");
 var path = require("path");
 
 var commands = {
-  member: require("./commands/member"),
-  start: require("./commands/start"),
-  build: require("./commands/build")
+  member: require("./tasks/member"),
+  start: require("./tasks/start"),
+  build: require("./tasks/build")
 }
 
 var command = commands[process.argv[2]];
