@@ -68,7 +68,7 @@ A website for the UNCC ACM Chapter
 │           └── index.html
 ├── package.json ............ Declare Node and NPM configuration.
 ├── public .................. Contains all files served at /.
-├── scripts 
+├── scripts
 │   └── index.js ............ [x] Root script file.
 ├── server .................. Contains all server-side logic.
 │   ├── config.js ........... Express instance configuration.
@@ -77,11 +77,12 @@ A website for the UNCC ACM Chapter
 ├── styles
 │   └── index.scss .......... Is the root style file.
 ├── templates ............... Contains code used to generate more code.
+├── tests ................... [x] Contains all unit tests.
 ├── uncc-acm ................ A script to easily run project commands.
 └── views ................... All .html files are run through the Handlebars engine.
     ├── home.html
     ├── index.html .......... The base file for all other rendered views.
     └── notfound.html
-    
+
 [x] = not implemented
 ```
