@@ -68,9 +68,8 @@ A website for the UNCC ACM Chapter
 │           └── index.html
 ├── package.json ............ Declare Node and NPM configuration.
 ├── public .................. Contains all files served at /.
-├── README.md ............... This :)
-├── scripts ................. Will be minified and served. [NOT IMPLEMENTED]
-│   └── index.js
+├── scripts 
+│   └── index.js ............ [✘] Root script file.
 ├── server .................. Contains all server-side logic.
 │   ├── config.js ........... Express instance configuration.
 │   ├── index.js ............ Root script by Node.
@@ -83,4 +82,6 @@ A website for the UNCC ACM Chapter
     ├── home.html
     ├── index.html .......... The base file for all other rendered views.
     └── notfound.html
+    
+[✘] = not implemented
 ```
