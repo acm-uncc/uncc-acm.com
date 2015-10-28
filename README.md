@@ -69,8 +69,7 @@ A website for the UNCC ACM Chapter
 │           └── index.html
 ├── package.json ............ Declare Node and NPM configuration.
 ├── public .................. Contains all files served at /.
-├── scripts
-│   └── index.js ............ [x] Root script file.
+├── scripts ................. [x] Scripts will be bundled and uglified for client.
 ├── server .................. Contains all server-side logic.
 │   ├── config.js ........... Express instance configuration.
 │   ├── index.js ............ Root script by Node.
