@@ -8,11 +8,12 @@ A website for the UNCC ACM Chapter
 3. Click the **Fork** button in the right hand corner of the page.
 5. Install git by following the git installer available at [git-scm.com](https://git-scm.com/download).
 6. Install Node.js by following the Node installer available at [nodejs.org](https://nodejs.org/en/).
-7. Open command prompt or your terminal emulator.
-  - I will be referring to both of these a simply the terminal.
+7. Open your terminal.
+  - If you are on Windows, you will need to install [Git Bash](https://git-for-windows.github.io/).
+  - I will be referring to both the terminal and Git Bash as the terminal.
 8. Follow [this guide](https://help.github.com/articles/generating-ssh-keys/) on how to add an SSH key to your GitHub account.
 9. In the terminal, navigate to the folder that you would like to contain your copy of the ACM website.
-  - Print the directory you are currently in with `chdir` on Windows and `pwd` on Unix like systems.
+  - Print the directory you are currently in with `pwd`.
   - Change directories with `cd [directory name]`.
 10. Run the command `git clone git@github.com:[your-usename]/uncc-acm.com.git`.
   - Make sure you replace `[your-usename]` with you GitHub username.
@@ -69,8 +70,7 @@ i.e.
 │           └── index.html
 ├── package.json ............ Declare Node and NPM configuration.
 ├── public .................. Contains all files served at /.
-├── scripts
-│   └── index.js ............ [x] Root script file.
+├── scripts ................. [x] Scripts will be bundled and uglified for client.
 ├── server .................. Contains all server-side logic.
 │   ├── config.js ........... Express instance configuration.
 │   ├── index.js ............ Root script by Node.
