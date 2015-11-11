@@ -1,7 +1,9 @@
 #header {
   $height: 4rem;
-
+  display: inline-block;
+  width: 100%;
   margin: 15px 0;
+  user-select: none;
 
   .logo {
     background: url('/assets/logo.png');
@@ -23,5 +25,69 @@
     // temp
     font-family: $title-font;
     font-weight: 100;
+  }
+
+  #home {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .buttons {
+    float: right;
+    display: inline-block;
+    vertical-align: top;
+    height: $height;
+    line-height: $height;
+
+    $size: $height / 3;
+    $btn-width: $size * (1.75);
+    $btn-height: $size;
+
+    a {
+      width: $btn-width;
+      height: $btn-height;
+      display: inline-block;
+      margin-left: 2px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
+
+    #menu {
+      @media (min-width: $screen-medium) {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+      }
+
+      // div {
+      //   width: 100%;
+      //   background: black;
+      //   height: 5%;
+      //   border-radius: 1px;
+      // }
+    }
+
+    #calendar {
+      background-image: url('/assets/icons/calendar.png');
+    }
+
+    #contact {
+      background-image: url('/assets/icons/contact.png');
+    }
+
+    #awards {
+      background-image: url('/assets/icons/awards.png');
+    }
+
+    #projects {
+      background-image: url('/assets/icons/projects.png');
+    }
+
+    #members {
+      background-image: url('/assets/icons/members.png');
+    }
+
   }
 }
