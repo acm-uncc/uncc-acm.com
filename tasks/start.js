@@ -39,6 +39,4 @@ gulp.task("restart", function () {
   pid = cp.fork(path.join(__dirname, ".."));
 })
 
-module.exports = function () {
-  gulp.start("develop");
-}
+gulp.start("develop");

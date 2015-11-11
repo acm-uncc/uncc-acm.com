@@ -1,2 +1,4 @@
-var path = require("path");
-console.log(path);
+/*
+  For testing purposes.
+*/
+// var path = require("path");
