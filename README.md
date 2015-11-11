@@ -40,17 +40,18 @@ A website for the UNCC ACM Chapter
   - If you need help you can email Nick Breaton, technical lead, at [nick@breaton.com](mailto:nick@breaton.com).
 19. Good luck and thanks for the help.
 
-### ☺
-
-## uncc-acm commands
+## Project Commands
 
 ```
-./uncc-acm ...
+npm run ...
 ```
-
-- `start` - Start the server in development mode.
+- `start` - Start the server in production mode.
+- `dev` - Start the server in development mode.
 - `member [name]` - Create a new member layout.
-- `member -d [name]` - Delete an existing member layout.
+- `member remove [name]` - Delete an existing member layout.
+
+i.e.
+`npm run member norm` - Will create a new member with the name *norm*.
 
 ## Project Structure
 

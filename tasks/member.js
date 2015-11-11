@@ -31,7 +31,10 @@ function create () {
     .pipe(map(function (content) {
       return content.toString().replace(/~/g, name);
     }))
-    .pipe(gulp.dest(writedir));
+    .pipe(gulp.dest(writedir))
+    .on("end", function () {
+      console.log("New member '" + name + "' has been created!");
+    });
 }
 
 function remove () {
@@ -39,19 +42,17 @@ function remove () {
     .pipe(clean());
 }
 
-module.exports = function () {
-  if (process.argv[3] === "-d") {
-    name = process.argv[4];
-    var action = remove;
-  } else {
-    name = process.argv[3];
-    var action = create;
-  }
+if (process.argv[2] === "remove") {
+  name = process.argv[3];
+  var action = remove;
+} else {
+  name = process.argv[2];
+  var action = create;
+}
 
-  if (name) {
-    init();
-    action();
-  } else {
-    console.log("Please enter a valid name!");
-  }
+if (name) {
+  init();
+  action();
+} else {
+  console.log("Please enter a valid name!");
 }
