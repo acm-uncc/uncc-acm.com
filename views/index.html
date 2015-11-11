@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- include site-wide stylesheet -->
   <link rel="stylesheet" href="/assets/site.css" />
+
+  <!-- mobile screen support -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <h1>Welcome to ACM &#9786;</h1>
-  <div id="content">
-    {{{ body }}}
+  <div class="center">
+    <!-- include site header -->
+    {{> header }}
+
+    <div id="content">
+      <!-- child template -->
+      {{{ body }}}
+    </div>
   </div>
+
+  <!-- include site-wide script bundle -->
+  <script src="/assets/site.js"></script>
 </body>
 </html>

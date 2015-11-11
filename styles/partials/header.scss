@@ -1,0 +1,27 @@
+#header {
+  $height: 4rem;
+
+  margin: 15px 0;
+
+  .logo {
+    background: url('/assets/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: $height * (187/169); // multiplied by image ratio
+    height: $height;
+  }
+
+  .title {
+    vertical-align: top;
+    line-height: $height;
+    display: inline-block;
+    height: $height;
+    font-size: $height / 5;
+    text-transform: uppercase;
+
+    // temp
+    font-family: $title-font;
+    font-weight: 100;
+  }
+}
