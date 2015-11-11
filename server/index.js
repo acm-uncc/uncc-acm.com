@@ -20,7 +20,7 @@ server.get("/", function (req, res) {
 
 // not found
 server.get("*", function (req, res) {
-  res.render("notfound");
+  res.render("not_found");
 });
 
 // map route to module
