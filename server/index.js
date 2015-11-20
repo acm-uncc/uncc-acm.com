@@ -1,29 +1,19 @@
-var express = require("express");
-var fs = require("fs");
-var path = require("path");
+var express = require('express');
+var dev     = require('./env/development');
+var prod    = require('./env/production');
+var path    = require('path');
 
-var server = express();
+var app = express();
 
-var config = require("./config");
+app.set('port', 3000);
 
-// set all server configurations
-config(server);
+if (process.env.NODE_ENV == 'development') dev(app);
+if (process.env.NODE_ENV == 'production') prod(app);
 
-// map routes to modules
-route("/", "./routes/statics");
-route("/member/", "./routes/members");
-
-// temp home
-server.get("/", function (req, res) {
-  res.render("home");
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'site.html'));
 });
 
-// not found
-server.get("*", function (req, res) {
-  res.render("not_found");
+app.listen(app.get('port'), function () {
+  console.log('Server is listening at http://localhost:' + app.get('port'));
 });
-
-// map route to module
-function route (route, modulePath) {
-  server.use(route, require(modulePath));
-}

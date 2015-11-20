@@ -1,46 +1,5 @@
-// site wide variables
-$screen-small: 480px;
-$screen-medium: 768px;
-$screen-large: 992px;
-$title-font: "Open Sans";
-
-// site wide styles
-@import './site';
-
-// import partials
-@import './partials/header';
-
-/*
-  This will be a default layout for all elements.
-*/
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-}
-
-/*
-  'rem' units are based on the font size defined in the HTML block.
-  We will be using 'rem' units where possibe to keep the site mobile
-  and desktop friendly. We can change the size of 'rem' units based
-  on the width of the site at certain break points.
-*/
-html {
-  // if screen wider than 768px
-  @media (min-width: $screen-small) {
-    font-size: 18px;
-  }
-
-  // else if screen wider than 768px
-  @media (min-width: $screen-medium) {
-    font-size: 22px;
-  }
-
-  // else if screen is wider than 992px
-  @media (min-width: $screen-large) {
-    font-size: 26px;
-  }
-
-  // else
-  font-size: 17px;
 }
