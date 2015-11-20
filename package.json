@@ -16,6 +16,7 @@
     "css-loader": "^0.23.0",
     "extract-text-webpack-plugin": "^0.9.1",
     "node-sass": "^3.4.2",
+    "nodemon": "^1.8.1",
     "sass-loader": "^3.1.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.6",
@@ -23,7 +24,7 @@
   },
   "scripts": {
     "start": "NODE_ENV=production node .",
-    "dev": "NODE_ENV=development node .",
+    "dev": "NODE_ENV=development node ./config/reload.js",
     "build": "NODE_ENV=production ./node_modules/.bin/webpack --config config/webpack.js"
   },
   "dependencies": {
