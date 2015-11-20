@@ -7,8 +7,8 @@ module.exports = function (app) {
 
   // run webpack server in child process
   var wds = path.resolve(__dirname, '../../node_modules/.bin/webpack-dev-server');
-  var config = path.resolve(__dirname, '../../config/webpack.js');
-  var child = cp.spawn(wds, ['--config', config, '--port', app.get('dev-port')])
+  var config = path.resolve(__dirname, '../webpack.js');
+  var child = cp.spawn(wds, [ '--config', config, '--port', app.get('dev-port') ]);
 
   // redirect resources
   app.get('/dist/app.*', function (req, res) {

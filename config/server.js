@@ -11,7 +11,7 @@ if (process.env.NODE_ENV == 'development') dev(app);
 if (process.env.NODE_ENV == 'production') prod(app);
 
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'site.html'));
+  res.sendFile(path.join(__dirname, 'views/index.html'));
 });
 
 app.listen(app.get('port'), function () {
