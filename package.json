@@ -28,6 +28,7 @@
     "build": "NODE_ENV=production ./node_modules/.bin/webpack --config config/webpack.js"
   },
   "dependencies": {
-    "angular": "^1.4.7"
+    "angular": "^1.4.7",
+    "angular-ui-router": "^0.2.15"
   }
 }
