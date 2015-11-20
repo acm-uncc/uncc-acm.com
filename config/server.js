@@ -15,6 +15,9 @@ if (process.env.NODE_ENV == 'production') prod(app);
 var api = require('./api');
 api(app);
 
+// serve public directory at root
+app.use('/', express.static(path.join(__dirname, '../public/')));
+
 // return angular app for everything else
 app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, 'views/index.html'));
