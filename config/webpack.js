@@ -8,7 +8,7 @@ module.exports = {
   devtool: DEV ? '#inline-source-map' : '',
   debug: true,
   entry: [
-    path.join(__dirname, '../client/index.js'),
+    path.join(__dirname, '../app/index.js'),
     path.join(__dirname, '../styles/index.scss')
   ],
   output: {
