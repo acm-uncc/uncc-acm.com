@@ -23,7 +23,10 @@
   },
   "scripts": {
     "start": "NODE_ENV=production node .",
-    "develop": "NODE_ENV=development node .",
+    "dev": "NODE_ENV=development node .",
     "build": "NODE_ENV=production ./node_modules/.bin/webpack --config config/webpack.js"
+  },
+  "dependencies": {
+    "angular": "^1.4.7"
   }
 }
