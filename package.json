@@ -1,7 +1,7 @@
 {
   "name": "uncc-acm.com",
   "version": "0.0.1",
-  "description": "A website for the UNCC ACM student chapter.",
+  "description": "A website for the UNC Charlotte ACM student chapter.",
   "main": "config/server.js",
   "repository": {
     "type": "git",
