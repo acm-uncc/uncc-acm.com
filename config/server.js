@@ -15,8 +15,10 @@ if (process.env.NODE_ENV == 'production') prod(app);
 var api = require('./api');
 api(app);
 
-// serve public directory at root
+// serve public files
 app.use('/', express.static(path.join(__dirname, '../public/')));
+app.use('/assets/', express.static(path.join(__dirname, '../assets/')));
+app.use('/partials/', express.static(path.join(__dirname, '../partials/')));
 
 // return angular app for everything else
 app.get('*', function (req, res) {
