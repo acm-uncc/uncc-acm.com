@@ -3,7 +3,6 @@ var router = require('angular-ui-router');
 
 var app = angular.module('app', [ router ]);
 
-
 app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
   // remove the hash (#) from the url
   $locationProvider.html5Mode(true);
