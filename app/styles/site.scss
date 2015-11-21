@@ -3,3 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.center {
+  width: 90%;
+  min-width: 320px;
+  max-width: 960px;
+  margin: auto;
+}

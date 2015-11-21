@@ -1,5 +1,36 @@
 #base {
   #header {
+    $height: 150px;
 
+    // tmp
+    .center {
+      border: 2px solid black;
+      height: $height;
+    }
+
+    & {
+      height: $height;
+    }
+
+    .logo {
+      display: inline-block;
+      float: left;
+      height: $height;
+      width: $height;
+    }
+
+    .title {
+      display: inline-block;
+      float: left;
+      height: $height;
+      line-height: $height;
+      vertical-align: middle;
+    }
+
+    .buttons {
+      line-height: $height;
+      float: right;
+      display: inline-block;
+    }
   }
 }
