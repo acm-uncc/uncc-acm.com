@@ -1,14 +1,15 @@
 #header {
-  $height: 150px;
+  $header-size: 6rem;
 
-  // tmp
   .center {
+    height: $header-size;
+
+    // tmp
     border: 2px solid black;
-    height: $height;
   }
 
   & {
-    height: $height;
+    height: $header-size;
   }
 
   a.home {
@@ -18,21 +19,37 @@
   .logo {
     display: inline-block;
     float: left;
-    height: $height;
-    width: $height;
+    height: $header-size;
+    width: $header-size;
   }
 
   .title {
     display: inline-block;
     float: left;
-    height: $height;
-    line-height: $height;
+    font-size: 1.5rem;
+    height: $header-size;
+    line-height: $header-size;
     vertical-align: middle;
+
+    &.large {
+      display: none;
+    }
+
+    @media (min-width: $screen-sm) {
+      &.small {
+        display: none;
+      }
+
+      &.large {
+        display: inherit;
+      }
+    }
+
   }
 
   .buttons {
-    line-height: $height;
-    float: right;
     display: inline-block;
+    float: right;
+    line-height: $header-size;
   }
 }

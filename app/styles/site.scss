@@ -4,8 +4,29 @@
   box-sizing: border-box;
 }
 
+html {
+  // $screen-sm
+  font-size: 15px;
+
+  @media (min-width: $screen-sm) {
+    font-size: 17px;
+  }
+
+  @media (min-width: $screen-md) {
+    font-size: 19px;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: 21px;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 23px;
+  }
+}
+
 .center {
-  width: 90%;
+  width: 95%;
   min-width: 320px;
   max-width: 960px;
   margin: auto;
