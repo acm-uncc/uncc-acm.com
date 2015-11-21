@@ -1,40 +1,38 @@
-#base {
-  #header {
-    $height: 150px;
+#header {
+  $height: 150px;
 
-    // tmp
-    .center {
-      border: 2px solid black;
-      height: $height;
-    }
+  // tmp
+  .center {
+    border: 2px solid black;
+    height: $height;
+  }
 
-    & {
-      height: $height;
-    }
+  & {
+    height: $height;
+  }
 
-    a.home {
-      display: inline-block;
-    }
+  a.home {
+    display: inline-block;
+  }
 
-    .logo {
-      display: inline-block;
-      float: left;
-      height: $height;
-      width: $height;
-    }
+  .logo {
+    display: inline-block;
+    float: left;
+    height: $height;
+    width: $height;
+  }
 
-    .title {
-      display: inline-block;
-      float: left;
-      height: $height;
-      line-height: $height;
-      vertical-align: middle;
-    }
+  .title {
+    display: inline-block;
+    float: left;
+    height: $height;
+    line-height: $height;
+    vertical-align: middle;
+  }
 
-    .buttons {
-      line-height: $height;
-      float: right;
-      display: inline-block;
-    }
+  .buttons {
+    line-height: $height;
+    float: right;
+    display: inline-block;
   }
 }
