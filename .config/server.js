@@ -18,7 +18,7 @@ api(app);
 // serve public files
 app.use('/', express.static(path.join(__dirname, '../public/')));
 app.use('/assets/', express.static(path.join(__dirname, '../assets/')));
-app.use('/partials/', express.static(path.join(__dirname, '../partials/')));
+app.use('/partials/', express.static(path.join(__dirname, '../app/partials/')));
 
 // return angular app for everything else
 app.get('*', function (req, res) {
