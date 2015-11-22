@@ -24,9 +24,11 @@
   }
 
   .title {
+    color: $font-light;
     display: inline-block;
     float: left;
     font-size: 1.5rem;
+    font-weight: normal;
     height: $header-size;
     line-height: $header-size;
     vertical-align: middle;

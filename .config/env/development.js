@@ -12,6 +12,6 @@ module.exports = function (app) {
 
   // redirect resources
   app.get('/dist/app.*', function (req, res) {
-    res.redirect('http://localhost:' + app.get('dev-port') + req.url);
+    res.redirect('http://' + req.headers.host.replace(app.get('port'), app.get('dev-port')) + req.url);
   });
 }
