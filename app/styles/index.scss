@@ -2,5 +2,13 @@
  contains all shared variables and imports
 */
 
+$screen-min: 320px;
+$screen-sm: 480px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$font-light: #888;
+
 @import './site';
 @import './base/header';

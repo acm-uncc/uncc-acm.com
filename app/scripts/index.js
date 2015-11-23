@@ -27,6 +27,22 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/calendar',
       templateUrl: 'pages/calendar.html'
     })
+    .state('projects', {
+      url: '/projects',
+      template: 'projects'
+    })
+    .state('awards', {
+      url: '/awards',
+      template: 'awards'
+    })
+    .state('members', {
+      url: '/members',
+      template: 'members'
+    })
+    .state('contact', {
+      url: '/contact',
+      template: 'contact'
+    })
     .state('404', {
       url: '/404',
       templateUrl: 'pages/error.html'

@@ -17,11 +17,10 @@ api(app);
 
 // serve public files
 app.use('/', express.static(path.join(__dirname, '../public/')));
-app.use('/assets/', express.static(path.join(__dirname, '../assets/')));
 
 // return angular app for everything else
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'views/index.html'));
+  res.sendFile(path.join(__dirname, '../app/index.html'));
 });
 
 // start the server on the specified port

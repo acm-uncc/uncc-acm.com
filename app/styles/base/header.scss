@@ -1,5 +1,90 @@
-#base {
-  #header {
+#header {
+  $header-size: 4.5rem;
+  margin: 1rem 0;
 
+  .center {
+    height: $header-size;
+  }
+
+  & {
+    height: $header-size;
+  }
+
+  a.home {
+    display: inline-block;
+  }
+
+  .logo {
+    display: inline-block;
+    float: left;
+    height: $header-size;
+    width: $header-size;
+    background-image: url('/assets/icons/logo.svg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: .5rem;
+  }
+
+  .title {
+    color: $font-light;
+    display: inline-block;
+    float: left;
+    font-size: 1.1rem;
+    font-weight: normal;
+    height: $header-size;
+    line-height: $header-size;
+    margin-right: .5rem;
+    text-transform: uppercase;
+
+    &.large {
+      display: none;
+    }
+
+    @media (min-width: $screen-sm) {
+      &.small {
+        display: none;
+      }
+
+      &.large {
+        display: inherit;
+      }
+    }
+
+  }
+
+  .buttons {
+    display: inline-block;
+    float: right;
+    height: inherit;
+
+    a {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 65%;
+      display: inline-block;
+      height: 2rem;
+      margin-left: .5rem;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2rem;
+    }
+
+    @mixin button ($name) {
+      a[ui-sref="#{$name}"] {
+        background-image: url('/assets/icons/#{$name}.svg');
+
+        @media (max-width: $screen-md) {
+          display: none;
+        }
+      }
+    }
+
+    @include button(members);
+    @include button(contact);
+    @include button(projects);
+    @include button(awards);
+    @include button(calendar);
   }
 }
