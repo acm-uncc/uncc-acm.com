@@ -18,17 +18,22 @@
     float: left;
     height: $header-size;
     width: $header-size;
+    background-image: url('/assets/icons/logo.svg');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .title {
     color: $font-light;
     display: inline-block;
     float: left;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: normal;
     height: $header-size;
     line-height: $header-size;
     margin-right: .5rem;
+    text-transform: uppercase;
 
     &.large {
       display: none;
