@@ -3,9 +3,6 @@
 
   .center {
     height: $header-size;
-
-    // tmp
-    border: 2px solid black;
   }
 
   & {
@@ -27,11 +24,11 @@
     color: $font-light;
     display: inline-block;
     float: left;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: normal;
     height: $header-size;
     line-height: $header-size;
-    vertical-align: middle;
+    margin-right: .5rem;
 
     &.large {
       display: none;
@@ -52,6 +49,35 @@
   .buttons {
     display: inline-block;
     float: right;
-    line-height: $header-size;
+    height: inherit;
+
+    a {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 65%;
+      display: inline-block;
+      height: 2rem;
+      margin-left: .5rem;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2rem;
+    }
+
+    @mixin button ($name) {
+      a[ui-sref="#{$name}"] {
+        background-image: url('/assets/icons/#{$name}.svg');
+
+        @media (max-width: $screen-md) {
+          display: none;
+        }
+      }
+    }
+
+    @include button(members);
+    @include button(contact);
+    @include button(projects);
+    @include button(awards);
+    @include button(calendar);
   }
 }

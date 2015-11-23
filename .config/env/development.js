@@ -1,5 +1,6 @@
 var cp = require('child_process');
 var path = require('path');
+var proxy = require('express-http-proxy');
 
 module.exports = function (app) {
   // specific development configuration
@@ -11,7 +12,9 @@ module.exports = function (app) {
   var child = cp.spawn(wds, [ '--config', config, '--port', app.get('dev-port') ]);
 
   // redirect resources
-  app.get('/dist/app.*', function (req, res) {
-    res.redirect('http://' + req.headers.host.replace(app.get('port'), app.get('dev-port')) + req.url);
-  });
+  app.get('/dist/app.*', proxy('http://localhost:4000', {
+    forwardPath: function(req, res) {
+      return require('url').parse(req.url).path;
+    }
+  }));
 }
