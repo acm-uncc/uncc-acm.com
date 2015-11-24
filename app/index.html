@@ -11,14 +11,17 @@
 <body>
   <!-- identify the page root -->
   <base href="/">
+  <div id="page">
     <!-- include the header partial -->
     <div ng-include="'base/header.html'"></div>
     <!-- center and include the current view -->
     <div class="center">
       <div ui-view></div>
     </div>
-  </base>
+  </div>
+  <!-- include the wooter partial -->
+  <div ng-include="'base/footer.html'"></div>
   <!-- import bundled JavaScript app -->
-  <script src="/dist/app.js" type="text/javascript"></script>
+  <script src="/dist/app.js" type="text/javascript" async></script>
 </body>
 </html>

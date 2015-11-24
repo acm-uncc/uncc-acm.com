@@ -1,0 +1,47 @@
+$footer-height: 5rem;
+
+#page {
+  min-height: 100vh;
+  padding-top: 1rem;
+  margin-bottom: 0 - $footer-height;
+  padding-bottom: $footer-height;
+}
+
+#footer {
+  height: $footer-height;
+  background: #1A1A1A;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .section {
+    overflow: hidden;
+    width: 24.5%;
+    color: white;
+    height: $footer-height;
+    float:left;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+
+    span {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 60%;
+    }
+  }
+
+  @mixin section ($name) {
+    .#{$name} {
+      background-image: url('/assets/icons/#{$name}.svg');
+      background-position: center 25%;
+      background-size: 2rem;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @include section (facebook);
+  @include section (location);
+  @include section (time);
+}
