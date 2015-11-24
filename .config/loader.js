@@ -17,7 +17,7 @@ function search (file, fixBase) {
 
 module.exports = {
   join: function (out) {
-    var files = search(path.join(__dirname, '../app/partials'), true);
+    var files = search(path.join(__dirname, '../client/partials'), true);
     files.forEach(function (file) {
       out.push(file);
     });

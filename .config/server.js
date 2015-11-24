@@ -20,7 +20,7 @@ app.use('/', express.static(path.join(__dirname, '../public/')));
 
 // return angular app for everything else
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, '../app/index.html'));
+  res.sendFile(path.join(__dirname, '../client/index.html'));
 });
 
 // start the server on the specified port

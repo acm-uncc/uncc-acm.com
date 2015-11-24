@@ -5,7 +5,7 @@ module.exports = function (app) {
   var router = express.Router();
 
   // require main entry to api
-  require('../api/index.js')(app, router);
+  require('../server/api/index.js')(app, router);
 
   // return a 404 if api is not found
   router.get('*', function (req, res) {
