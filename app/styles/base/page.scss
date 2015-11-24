@@ -1,0 +1,16 @@
+#page {
+  margin-bottom: 0 - $footer-height;
+  min-height: 100vh;
+  padding-bottom: $footer-height;
+  padding-top: 1rem;
+
+  @media (max-width: $footer-breakpoint) {
+    margin-bottom: 0 - $footer-height-mobile;
+    padding-bottom: $footer-height-mobile;
+  }
+
+  #view {
+    margin-bottom: 1rem;
+    min-height: 150px;
+  }
+}
