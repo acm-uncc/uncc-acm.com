@@ -40,11 +40,8 @@ npm run ...
   3. And finally `git push`.
 16. Now that your changes have been pushed to GitHub, you can view them by going to `https://github.com/your-username/uncc-acm.com.git`.
 17. The final step is to add then to the official GitHub repository. This is done by creating a pull request.
-  1. First, go to https://github.com/uncc-acm/uncc-acm.com.
-  2. On the right hand side click on the **Pull Request** button.
-  3. Click **New Pull Request**.
-  3. Then click on **compare across forks**.
-  4. Change the head fork to `your-name/uncc-acm` and leave the base fork `uncc-acm/uncc-acm.com`.
+  1. First, go to `https://github.com/your-username/uncc-acm.com`.
+  3. Click the green **New Pull Request**.
   5. Click **Create Pull Request**.
   6. Enter in a message and you are good to go.
 18. Take a breath. I know this is a lot if you have never seen any of these programs before.
