@@ -13,24 +13,34 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/',
       templateUrl: 'pages/home.html'
     })
-    .state('404', {
-      url: '/404',
+    .state('calendar', {
+      url: '/calendar',
+      templateUrl: 'pages/template.html'
+    })
+    .state('projects', {
+      url: '/projects',
+      templateUrl: 'pages/template.html'
+    })
+    .state('awards', {
+      url: '/awards',
+      templateUrl: 'pages/template.html'
+    })
+    .state('members', {
+      url: '/members',
+      templateUrl: 'pages/template.html'
+    })
+    .state('contact', {
+      url: '/contact',
+      templateUrl: 'pages/template.html'
+    })
+    .state('not found', {
       templateUrl: 'pages/error.html'
     })
 
-  var pages = [ 'calendar', 'projects', 'awards', 'members', 'contact' ];
-
-  pages.forEach(function (page) {
-    $stateProvider
-      .state(page, {
-        url: '/' + page,
-        templateUrl: 'pages/' + page + '.html'
-      });
-    });
 
   // maintain URL when defaulting to not found page
   $urlRouterProvider.otherwise(function ($injector) {
-    $injector.get('$state').go('404', null, { location: false });
+    $injector.get('$state').go('not found', null, { location: false });
   });
 });
 
