@@ -1,5 +1,6 @@
 $footer-height: 4rem;
-$footer-height-mobile: 8rem;
+$footer-height-mobile: 12rem;
+$footer-break-point: $screen-sm;
 
 #page {
   margin-bottom: 0 - $footer-height;
@@ -7,44 +8,77 @@ $footer-height-mobile: 8rem;
   padding-bottom: $footer-height;
   padding-top: 1rem;
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $footer-break-point) {
     margin-bottom: 0 - $footer-height-mobile;
     padding-bottom: $footer-height-mobile;
   }
 }
 
 #footer {
-  height: $footer-height;
   background: #1A1A1A;
+  height: $footer-height;
+  overflow: hidden;
   position: relative;
   width: 100%;
-  overflow: hidden;
 
-  .section {
-    overflow: hidden;
-    width: 33% + (1/3);
-    color: white;
-    height: $footer-height;
-    float:left;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
+  @media (max-width: $footer-break-point) {
+    height: $footer-height-mobile;
 
-    span {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 65%;
-      font-size: .75rem;
+    .section {
+      border-top: 1px solid $font-light;
+    }
+
+    .section:first-child {
+      border: none;
     }
   }
 
   @mixin section ($name) {
+    $section-height-mobile: $footer-height-mobile / 4;
+
     .#{$name} {
       background-image: url('/assets/icons/#{$name}.svg');
       background-position: center 25%;
-      background-size: 1.75rem;
       background-repeat: no-repeat;
+      background-size: 1.75rem;
+      color: white;
+      float:left;
+      height: $footer-height;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      width: 33% + (1/3);
+
+      @media (max-width: $footer-break-point) {
+        height: $section-height-mobile;
+        background-position: 0 center;
+        width: 100%;
+        position: relative;
+        background-size: $section-height-mobile / 2;
+        margin-bottom: .5rem;
+      }
+
+      span {
+        font-size: .75rem;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 65%;
+
+        @media (max-width: $footer-break-point) {
+          display: inline-block;
+          font-size: 1rem;
+          height: $section-height-mobile;
+          left: $section-height-mobile;
+          line-height: $section-height-mobile;
+          margin-bottom: 1rem;
+          position: absolute;
+          text-align: left;
+          top: 0;
+          vertical-align: middle;
+        }
+      }
     }
   }
 
