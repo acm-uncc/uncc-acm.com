@@ -10,5 +10,12 @@ $screen-xl: 1200px;
 
 $font-light: #888;
 
+$footer-height: 4rem;
+$footer-height-mobile: 12rem;
+$footer-breakpoint: $screen-sm;
+
+
 @import './site';
+@import './base/page';
 @import './base/header';
+@import './base/footer';

@@ -5,14 +5,14 @@ var DEV = (process.env.NODE_ENV == 'development');
 var PROD = (process.env.NODE_ENV == 'production');
 
 var templateEntries = require('./loader.js');
-var templatePath = path.join(__dirname, '../app/partials/');
+var templatePath = path.join(__dirname, '../client/partials/');
 
 module.exports = {
   devtool: DEV ? '#inline-source-map' : false,
   debug: true,
   entry: templateEntries.join([
-    path.join(__dirname, '../app/scripts/index.js'),
-    path.join(__dirname, '../app/styles/index.scss')
+    path.join(__dirname, '../client/app/index.js'),
+    path.join(__dirname, '../client/styles/index.scss')
   ]),
   output: {
     path: path.join(__dirname, '../dist'),

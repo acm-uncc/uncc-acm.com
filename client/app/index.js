@@ -7,17 +7,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
   // remove the hash (#) from the url
   $locationProvider.html5Mode(true);
 
-  /*
-    New pages must be registered here.
-
-    A url and template to display at that url must be provided.
-
-    An angular controller can also be provided in order to interact with the
-    template using JavaScript.
-
-    This is from the ui-router:
-    http://bit.ly/1N01wM5
-  */
+  // custom pages
   $stateProvider
     .state('home', {
       url: '/',
@@ -25,32 +15,32 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state('calendar', {
       url: '/calendar',
-      templateUrl: 'pages/calendar.html'
+      templateUrl: 'pages/template.html'
     })
     .state('projects', {
       url: '/projects',
-      template: 'projects'
+      templateUrl: 'pages/template.html'
     })
     .state('awards', {
       url: '/awards',
-      template: 'awards'
+      templateUrl: 'pages/template.html'
     })
     .state('members', {
       url: '/members',
-      template: 'members'
+      templateUrl: 'pages/template.html'
     })
     .state('contact', {
       url: '/contact',
-      template: 'contact'
+      templateUrl: 'pages/template.html'
     })
-    .state('404', {
-      url: '/404',
+    .state('not found', {
       templateUrl: 'pages/error.html'
     })
 
+
   // maintain URL when defaulting to not found page
   $urlRouterProvider.otherwise(function ($injector) {
-    $injector.get('$state').go('404', null, { location: false });
+    $injector.get('$state').go('not found', null, { location: false });
   });
 });
 

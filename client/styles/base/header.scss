@@ -1,6 +1,6 @@
 #header {
   $header-size: 4.5rem;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
 
   .center {
     height: $header-size;
@@ -36,6 +36,7 @@
     line-height: $header-size;
     margin-right: .5rem;
     text-transform: uppercase;
+    letter-spacing: .05rem;
 
     &.large {
       display: none;
