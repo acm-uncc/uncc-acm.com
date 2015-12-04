@@ -59,33 +59,45 @@
     float: right;
     height: inherit;
 
-    a {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 65%;
+  }
+
+  a.button {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65%;
+    display: inline-block;
+    height: 2rem;
+    margin-left: .5rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    cursor: pointer;
+  }
+
+  a.button.menu {
+    background-image: url('/assets/icons/menu.svg');
+    float: right;
+    display: none;
+
+    @media (max-width: $screen-md) {
       display: inline-block;
-      height: 2rem;
-      margin-left: .5rem;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 2rem;
     }
+  }
 
-    @mixin button ($name) {
-      a[ui-sref="#{$name}"] {
-        background-image: url('/assets/icons/#{$name}.svg');
+  @mixin button ($name) {
+    a[ui-sref="#{$name}"] {
+      background-image: url('/assets/icons/#{$name}.svg');
 
-        @media (max-width: $screen-md) {
-          display: none;
-        }
+      @media (max-width: $screen-md) {
+        display: none;
       }
     }
-
-    @include button(members);
-    @include button(contact);
-    @include button(projects);
-    @include button(awards);
-    @include button(calendar);
   }
+
+  @include button(members);
+  @include button(contact);
+  @include button(projects);
+  @include button(awards);
+  @include button(calendar);
 }
