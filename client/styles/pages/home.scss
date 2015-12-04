@@ -1,3 +1,8 @@
-.message {
-  color: orange;
+.tile {
+  background: gray;
+  display: inline-block;
+  $size: 150px;
+  width: $size;
+  height: $size;
+  padding: 10px;
 }
